@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="343dp"
-        android:layout_height="62dp"
+        android:layout_width="314dp"
+        android:layout_height="128dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="33dp"
@@ -30,7 +30,7 @@
         android:id="@+id/editTextNumber"
         android:layout_width="232dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="53dp"
+        android:layout_marginBottom="35dp"
         android:ems="10"
         android:hint="@string/hintQuarters"
         android:inputType="number"
