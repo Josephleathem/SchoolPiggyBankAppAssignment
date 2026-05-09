@@ -10,7 +10,7 @@
     <string name="btCalculate">CALCULATE</string>
     <string name="Prompt">Transaction</string>
     <string-array name="tvGroup">
-        <item>Deposit</item>
-        <item>Withdraw</item>
+        <item>Save</item>
+        <item>Spend</item>
     </string-array>
 </resources>

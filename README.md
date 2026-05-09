@@ -31,6 +31,7 @@ This project is a **Piggy Bank Children's App** — an Android application that 
 - Input fields for the number of **quarters, dimes, nickels, and pennies**
 - A **Spinner** component to select between saving or spending
 - Displays the **calculated result** showing how much the child is saving or spending
+- A Calculate button to process input and show result
 
 ---
 
