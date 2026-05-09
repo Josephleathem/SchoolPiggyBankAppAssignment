@@ -69,7 +69,13 @@ public class PiggyBank extends AppCompatActivity {
                 Tpennies = pCount;
                 total = Tquarters * Quarters + Tdimes * Dimes + Tnickels * Nickels + Tpennies * Pennies;
                 DecimalFormat currency = new DecimalFormat("$###,###.##");
-                result.setText("You would like to " + groupChoice + " " + currency.format(total) + " from your piggy bank.");
+                if ("Deposit".equalsIgnoreCase(groupChoice)) {
+                    result.setText("You would like to " + groupChoice + " " + currency.format(total) + " to your piggy bank.");
+                } else if ("Withdraw".equalsIgnoreCase(groupChoice)) {
+                    result.setText("You would like to " + groupChoice + " " + currency.format(total) + " from your piggy bank.");
+                } else {
+                    result.setText("Please choose Deposit or Withdraw.");
+                }
             }
             });
 
