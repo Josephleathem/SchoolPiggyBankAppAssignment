@@ -3,4 +3,9 @@
     <string name="tvTitle">Piggy Bank</string>
     <string name="ivPigDscription">A Pig facing left with a coin above it.</string>
     <string name="btStart">Go to Piggy</string>
+    <string name="hintQuarters">Quarters</string>
+    <string name="hintDimes">Dimes</string>
+    <string name="hintNickels">Nickels</string>
+    <string name="hintPennies">Pennies</string>
+    <string name="btCalculate">CALCULATE</string>
 </resources>
