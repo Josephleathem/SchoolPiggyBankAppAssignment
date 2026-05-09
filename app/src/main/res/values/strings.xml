@@ -8,4 +8,9 @@
     <string name="hintNickels">Nickels</string>
     <string name="hintPennies">Pennies</string>
     <string name="btCalculate">CALCULATE</string>
+    <string name="Prompt">Transaction</string>
+    <string-array name="tvGroup">
+        <item>Deposit</item>
+        <item>Withdraw</item>
+    </string-array>
 </resources>

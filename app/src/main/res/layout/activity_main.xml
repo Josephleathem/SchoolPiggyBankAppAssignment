@@ -10,11 +10,11 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="344dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="31dp"
+        android:layout_width="349dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="70dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginEnd="33dp"
         android:layout_marginBottom="46dp"
         android:gravity="center"
         android:text="@string/tvTitle"
@@ -42,8 +42,8 @@
 
     <Button
         android:id="@+id/btStart"
-        android:layout_width="211dp"
-        android:layout_height="55dp"
+        android:layout_width="213dp"
+        android:layout_height="76dp"
         android:layout_marginBottom="97dp"
         android:backgroundTint="#F47C7E"
         android:text="@string/btStart"
