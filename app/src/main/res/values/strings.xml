@@ -9,6 +9,15 @@
     <string name="hintPennies">Pennies</string>
     <string name="btCalculate">CALCULATE</string>
     <string name="Prompt">Transaction</string>
+    <string name="btAdd">+</string>
+    <string name="btMinus">-</string>
+    <string name="btReset">RESET</string>
+    <string name="noCoins">No coins yet</string>
+    <string name="visualCoinText">%1$d coin(s): %2$s</string>
+    <string name="visualCoinTextWithMore">%1$d coin(s): %2$s +%3$d more</string>
+    <string name="saveResult">You would like to Save %1$s in your piggy bank.</string>
+    <string name="spendResult">You would like to Spend %1$s out of your piggy bank.</string>
+    <string name="pickSaveSpend">Please choose Save or Spend.</string>
     <string-array name="tvGroup">
         <item>Save</item>
         <item>Spend</item>

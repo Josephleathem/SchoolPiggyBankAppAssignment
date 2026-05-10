@@ -11,109 +11,292 @@
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="24dp"
         android:gravity="center"
         android:text="@string/tvTitle"
         android:textColor="#F37C7E"
-        android:textSize="45sp"
+        android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvQuarters"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/tvQuarters"
-        android:layout_width="232dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
-        android:ems="10"
-        android:hint="@string/hintQuarters"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/tvDimes"
+    <LinearLayout
+        android:id="@+id/coinSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
 
-    <EditText
-        android:id="@+id/tvDimes"
-        android:layout_width="229dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="37dp"
-        android:ems="10"
-        android:hint="@string/hintDimes"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/tvNickels"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuarters" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/hintQuarters"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/tvNickels"
-        android:layout_width="229dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="31dp"
-        android:ems="10"
-        android:hint="@string/hintNickels"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/tvPennies"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDimes" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/tvPennies"
-        android:layout_width="227dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="55dp"
-        android:ems="10"
-        android:hint="@string/hintPennies"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/spGroup"
+            <Button
+                android:id="@+id/btMinusQuarters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btMinus" />
+
+            <EditText
+                android:id="@+id/etQuartersCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ems="4"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/hintQuarters"
+                android:inputType="number"
+                android:text="0"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btAddQuarters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btAdd" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvQuartersVisual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/noCoins"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/hintDimes"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btMinusDimes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btMinus" />
+
+            <EditText
+                android:id="@+id/etDimesCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ems="4"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/hintDimes"
+                android:inputType="number"
+                android:text="0"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btAddDimes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btAdd" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDimesVisual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/noCoins"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/hintNickels"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btMinusNickels"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btMinus" />
+
+            <EditText
+                android:id="@+id/etNickelsCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ems="4"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/hintNickels"
+                android:inputType="number"
+                android:text="0"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btAddNickels"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btAdd" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNickelsVisual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/noCoins"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/hintPennies"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btMinusPennies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btMinus" />
+
+            <EditText
+                android:id="@+id/etPenniesCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ems="4"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/hintPennies"
+                android:inputType="number"
+                android:text="0"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btAddPennies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btAdd" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPenniesVisual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/noCoins"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spGroup"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/tvGroup"
+        android:prompt="@string/Prompt"
+        android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNickels" />
+        app:layout_constraintTop_toBottomOf="@+id/coinSection" />
 
     <Button
         android:id="@+id/btCalc"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="#F47C7E"
         android:text="@string/btCalculate"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvResult"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btReset"
+        app:layout_constraintHorizontalWeight="1"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spGroup" />
+
+    <Button
+        android:id="@+id/btReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F47C7E"
+        android:text="@string/btReset"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontalWeight="1"
+        app:layout_constraintStart_toEndOf="@+id/btCalc"
         app:layout_constraintTop_toBottomOf="@+id/spGroup" />
 
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="80dp"
-        android:textSize="24sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btCalc" />
 
-    <Spinner
-        android:id="@+id/spGroup"
-        android:layout_width="407dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="28dp"
-        android:entries="@array/tvGroup"
-        android:prompt="@string/Prompt"
-        android:spinnerMode="dialog"
-        app:layout_constraintBottom_toTopOf="@+id/btCalc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPennies" />
 </androidx.constraintlayout.widget.ConstraintLayout>
