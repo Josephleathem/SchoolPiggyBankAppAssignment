@@ -64,10 +64,11 @@
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:ems="4"
-                android:focusable="false"
                 android:gravity="center"
                 android:hint="@string/hintQuarters"
                 android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
                 android:text="0"
                 android:textStyle="bold" />
 
@@ -115,10 +116,11 @@
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:ems="4"
-                android:focusable="false"
                 android:gravity="center"
                 android:hint="@string/hintDimes"
                 android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
                 android:text="0"
                 android:textStyle="bold" />
 
@@ -166,10 +168,11 @@
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:ems="4"
-                android:focusable="false"
                 android:gravity="center"
                 android:hint="@string/hintNickels"
                 android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
                 android:text="0"
                 android:textStyle="bold" />
 
@@ -217,10 +220,11 @@
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:ems="4"
-                android:focusable="false"
                 android:gravity="center"
                 android:hint="@string/hintPennies"
                 android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
                 android:text="0"
                 android:textStyle="bold" />
 

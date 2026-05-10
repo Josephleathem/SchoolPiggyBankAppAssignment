@@ -3,6 +3,8 @@ package com.example.schoolpiggybankappassignment;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -80,10 +82,45 @@ public class PiggyBank extends AppCompatActivity {
         calc.setOnClickListener(v -> calculateTotal());
         reset.setOnClickListener(v -> resetPiggyBank());
 
+        attachCountInputWatcher(numQuarters, quartersVisual);
+        attachCountInputWatcher(numDimes, dimesVisual);
+        attachCountInputWatcher(numNickels, nickelsVisual);
+        attachCountInputWatcher(numPennies, penniesVisual);
+
         updateVisual(quartersVisual, getCount(numQuarters));
         updateVisual(dimesVisual, getCount(numDimes));
         updateVisual(nickelsVisual, getCount(numNickels));
         updateVisual(penniesVisual, getCount(numPennies));
+    }
+
+    private void attachCountInputWatcher(EditText countField, TextView visualField) {
+        countField.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No-op.
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // No-op.
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                int current = getCount(countField);
+
+                // Normalize invalid/negative input without retrigger loops.
+                String normalized = String.valueOf(current);
+                if (!normalized.equals(s.toString())) {
+                    countField.removeTextChangedListener(this);
+                    countField.setText(normalized);
+                    countField.setSelection(normalized.length());
+                    countField.addTextChangedListener(this);
+                }
+
+                updateVisual(visualField, current);
+            }
+        });
     }
 
     private void updateCount(EditText countField, TextView visualField, int delta) {
